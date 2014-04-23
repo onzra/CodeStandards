@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<ruleset name="ONZRA">
+	<description>ONZRA's PHP coding standard.</description>
+
+	<!-- Arrays -->
+
+	<!-- No spaces around square brackets -->
+	<rule ref="Squiz.Arrays.ArrayBracketSpacing" />
+
+
+	<!-- Classes -->
+
+	<!-- Ensure class keywords are lowercase -->
+	<rule ref="Squiz.Classes.LowercaseClassKeywords" />
+	<!-- Static members are referenced with self:: -->
+	<rule ref="Squiz.Classes.SelfMemberReference" />
+	<!-- Check for properly named classes -->
+	<rule ref="Squiz.Classes.ValidClassName">
+		<!-- Ignore some poorly named CakePHP classes -->
+		<exclude-pattern>app/Config/Schema/i18n.php</exclude-pattern>
+		<exclude-pattern>app/Config/database.php</exclude-pattern>
+	</rule>
+
+
+	<!-- Code Analysis -->
+
+	<!-- No empty statements -->
+	<rule ref="Generic.CodeAnalysis.EmptyStatement" />
+	<!-- Do not use a function call in for loop test -->
+	<rule ref="Generic.CodeAnalysis.ForLoopWithTestFunctionCall" />
+	<!-- Do not reuse outer loop incrementer variable in inner loop -->
+	<rule ref="Generic.CodeAnalysis.JumbledIncrementer" />
+	<!-- Do not use if statement with only the value true or false -->
+	<rule ref="Generic.CodeAnalysis.UnconditionalIfStatement" />
+
+
+	<!-- Commenting -->
+
+	<!-- No perl style inline comments -->
+	<rule ref="PEAR.Commenting.InlineComment" />
+	<!-- Require @throws tag in function comments -->
+	<rule ref="Squiz.Commenting.FunctionCommentThrowTag" />
+	<!-- Proper function comment formatting -->
+	<!-- TODO: allow int and bool -->
+	<rule ref="Squiz.Commenting.FunctionComment">
+		<!-- Function comments not required in test cases -->
+		<exclude-pattern>Test/Case</exclude-pattern>
+		<exclude-pattern>tests/cases</exclude-pattern>
+	</rule>
+	<!-- Disable short comment ending in full stop error -->
+	<rule ref="Squiz.Commenting.FunctionComment.ShortFullStop">
+		<severity>0</severity>
+	</rule>
+	<!-- Disable throw comment ending in full stop error -->
+	<rule ref="Squiz.Commenting.FunctionComment.ThrowsNoFullStop">
+		<severity>0</severity>
+	</rule>
+	<!-- Disable throw comment ending in full stop error -->
+	<rule ref="Squiz.Commenting.FunctionComment.ParamCommentFullStop">
+		<severity>0</severity>
+	</rule>
+	<!-- Doc comment alignment -->
+	<rule ref="Squiz.Commenting.DocCommentAlignment" />
+	<!-- Empty catch clause must have at least a comment -->
+	<rule ref="Squiz.Commenting.EmptyCatchComment" />
+	<!-- Modify to not allow spaces after // in javascript -->
+	<!--<rule ref="Squiz.Commenting.InlineComment" />-->
+	<!-- No post statement comments -->
+	<rule ref="Squiz.Commenting.PostStatementComment" />
+	<!-- Proper variable comments -->
+	<rule ref="Squiz.Commenting.VariableComment" />
+	<!-- Ensure proper class comments -->
+	<rule ref="ONZRAL.Commenting.ClassComment" />
+
+
+	<!-- Control Structures -->
+
+	<!-- No inline control structures -->
+	<rule ref="Generic.ControlStructures.InlineControlStructure" />
+	<!-- Proper foreach loop declaration -->
+	<rule ref="Squiz.ControlStructures.ForEachLoopDeclaration" />
+	<!-- Proper for loop declaration -->
+	<rule ref="Squiz.ControlStructures.ForLoopDeclaration" />
+	<!-- All control structure keywords must be lowercase -->
+	<rule ref="Squiz.ControlStructures.LowercaseDeclaration" />
+	<!-- Modify to allow return statement in place of break; -->
+	<!--<rule ref="Squiz.ControlStructures.SwitchDeclaration" />-->
+	<!-- Proper spacing for control structures -->
+	<rule ref="ONZRAL.ControlStructures.ControlSignature" />
+
+
+	<!-- Files -->
+
+	<!-- Files must end with a newline character -->
+	<rule ref="Generic.Files.EndFileNewline" />
+	<!-- Correct line ending character -->
+	<rule ref="Generic.Files.LineEndings" />
+
+
+	<!-- Formatting -->
+
+	<!-- Multiple statements on one line not allowed -->
+	<rule ref="Generic.Formatting.DisallowMultipleStatements" />
+	<!-- No space after cast -->
+	<rule ref="Generic.Formatting.NoSpaceAfterCast" />
+
+
+	<!-- Functions -->
+
+	<!-- Space after commas in function arguments -->
+	<rule ref="Generic.Functions.FunctionCallArgumentSpacing"/>
+	<!-- Opening brace formatting -->
+	<rule ref="Generic.Functions.OpeningFunctionBraceKernighanRitchie"/>
+
+
+	<!-- Metrics -->
+
+	<!-- Cyclomatic complexity -->
+	<rule ref="Generic.Metrics.CyclomaticComplexity" />
+	<!-- Nesting level -->
+	<rule ref="Generic.Metrics.NestingLevel" />
+
+
+	<!-- Naming Conventions -->
+
+	<!-- Camel case function names -->
+	<!--Disabling rule until solution can be found for CakePHP Controller action naming-->
+	<!--<rule ref="Generic.NamingConventions.CamelCapsFunctionName" />-->
+	<!-- Use __construct function naming -->
+	<rule ref="Generic.NamingConventions.ConstructorName" />
+	<!-- Upper case constant names -->
+	<rule ref="Generic.NamingConventions.UpperCaseConstantName" />
+
+
+	<!-- PHP -->
+
+	<!-- No deprecated functions -->
+	<rule ref="Generic.PHP.DeprecatedFunctions" />
+	<rule ref="Generic.PHP.DisallowShortOpenTag" />
+	<rule ref="Generic.PHP.ForbiddenFunctions" />
+	<rule ref="Generic.PHP.LowerCaseConstant" />
+	<rule ref="Generic.PHP.NoSilencedErrors" />
+
+
+	<!-- Strings -->
+
+	<rule ref="Generic.Strings.UnnecessaryStringConcat">
+		<exclude-pattern>*.js</exclude-pattern>
+	</rule>
+
+
+	<!-- Whitespace -->
+
+	<!-- If we run this check separately we can use tab-width option to convert tabs to spaces, this allows us to use lots of existing sniffs that only support spaces -->
+	<!--<rule ref="Generic.WhiteSpace.DisallowSpaceIndent" />-->
+
+
+	<!-- Javascript -->
+
+	<!-- Run closure linter -->
+	<rule ref="Generic.Debug.ClosureLinter" />
+	<!-- Rune JSHint -->
+	<rule ref="Generic.Debug.JSHint"/>
+
+
+	<!-- CSS -->
+
+	<!-- Run CSS linter -->
+	<rule ref="Generic.Debug.CSSLint"/>
+
+</ruleset>
