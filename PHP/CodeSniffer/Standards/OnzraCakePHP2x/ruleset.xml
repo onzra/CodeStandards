@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<ruleset name="OnzraCakePHP">
+    <description>The ONZRA CakePHP 2.x coding standard.</description>
+
+    <rule ref="PSR2">
+        <!-- CakePHP does not use namespaces. -->
+        <exclude name="PSR1.Classes.ClassDeclaration.MissingNamespace"/>
+        <!-- Allow App::uses() includes in class files. -->
+        <exclude name="PSR1.Files.SideEffects.FoundWithSymbols" />
+    </rule>
+
+</ruleset>
