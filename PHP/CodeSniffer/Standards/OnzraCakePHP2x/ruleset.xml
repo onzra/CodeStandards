@@ -9,4 +9,17 @@
         <exclude name="PSR1.Files.SideEffects.FoundWithSymbols" />
     </rule>
 
+    <!-- Proper docblock formatting -->
+    <rule ref="Generic.Commenting.DocComment"/>
+
+    <!-- TODO: Class comment sniff, needs to allow @property tag and any others -->
+
+    <!-- Function comments -->
+    <rule ref="Squiz.Commenting.FunctionComment">
+        <exclude name="Squiz.Commenting.FunctionComment.MissingReturn"/>
+        <!-- TODO: Make a version of this sniff that allows int and bool (vs. integer and boolean) -->
+        <exclude name="Squiz.Commenting.FunctionComment.IncorrectParamVarName" />
+        <exclude name="Squiz.Commenting.FunctionComment.ParamCommentFullStop" />
+    </rule>
+
 </ruleset>
