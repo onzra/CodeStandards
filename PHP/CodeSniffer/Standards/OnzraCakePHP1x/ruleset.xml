@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<ruleset name="OnzraCakePHP">
+    <description>The ONZRA CakePHP 2.x coding standard.</description>
+
+    <rule ref="PSR2">
+        <!-- CakePHP does not use namespaces. -->
+        <exclude name="PSR1.Classes.ClassDeclaration.MissingNamespace"/>
+        <!-- Allow App::uses() includes in class files. -->
+        <exclude name="PSR1.Files.SideEffects.FoundWithSymbols" />
+        <!-- Allow underscored function names -->
+        <exclude name="PSR1.Methods.CamelCapsMethodName.NotCamelCaps" />
+        <!-- Allow var keyword for property declarations -->
+        <exclude name="PSR2.Classes.PropertyDeclaration.VarUsed" />
+        <!-- Allow properties without visibility declaration -->
+        <exclude name="PSR2.Classes.PropertyDeclaration.ScopeMissing" />
+        <!-- Allow methods without visibility declaration -->
+        <exclude name="Squiz.Scope.MethodScope.Missing" />
+        <!-- Allow _ prefix to indicate visibility -->
+        <exclude name="PSR2.Methods.MethodDeclaration.Underscore" />
+    </rule>
+
+</ruleset>
