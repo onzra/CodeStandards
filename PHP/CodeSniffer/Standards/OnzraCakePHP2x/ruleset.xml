@@ -7,6 +7,9 @@
         <exclude name="PSR1.Classes.ClassDeclaration.MissingNamespace"/>
         <!-- Allow App::uses() includes in class files. -->
         <exclude name="PSR1.Files.SideEffects.FoundWithSymbols" />
+        <!-- Allow underscored function names -->
+        <!-- TODO: Only allow in controllers -->
+        <exclude name="PSR1.Methods.CamelCapsMethodName.NotCamelCaps"/>
     </rule>
 
     <!-- Proper docblock formatting -->
