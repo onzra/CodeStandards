@@ -17,7 +17,8 @@
     <!-- Proper docblock formatting -->
     <rule ref="Generic.Commenting.DocComment"/>
 
-    <!-- TODO: Class comment sniff, needs to allow @property tag and any others -->
+    <!-- Class comments -->
+    <rule ref="OnzraCakePHP2x.Commenting.ClassComment" />
 
     <!-- Function comments -->
     <rule ref="Squiz.Commenting.FunctionComment">
@@ -26,5 +27,8 @@
         <exclude name="Squiz.Commenting.FunctionComment.IncorrectParamVarName" />
         <exclude name="Squiz.Commenting.FunctionComment.ParamCommentFullStop" />
     </rule>
+
+    <!-- Variable comments -->
+    <rule ref="Squiz.Commenting.VariableComment" />
 
 </ruleset>
