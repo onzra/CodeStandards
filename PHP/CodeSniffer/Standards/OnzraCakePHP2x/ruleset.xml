@@ -21,14 +21,11 @@
     <rule ref="OnzraCakePHP2x.Commenting.ClassComment" />
 
     <!-- Function comments -->
-    <rule ref="Squiz.Commenting.FunctionComment">
-        <exclude name="Squiz.Commenting.FunctionComment.MissingReturn"/>
-        <!-- TODO: Make a version of this sniff that allows int and bool (vs. integer and boolean) -->
-        <exclude name="Squiz.Commenting.FunctionComment.IncorrectParamVarName" />
-        <exclude name="Squiz.Commenting.FunctionComment.ParamCommentFullStop" />
+    <rule ref="OnzraCakePHP2x.Commenting.FunctionComment">
+        <exclude name="OnzraCakePHP2x.Commenting.FunctionComment.MissingReturn"/>
     </rule>
 
     <!-- Variable comments -->
-    <rule ref="Squiz.Commenting.VariableComment" />
+    <rule ref="OnzraCakePHP2x.Commenting.VariableComment" />
 
 </ruleset>
